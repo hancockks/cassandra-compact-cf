@@ -14,9 +14,9 @@ This script will use the JMX forceUserDefinedCompaction operation sequentially o
 
 ### Requirements
 
-o Tested only on CentOS and Apache Cassandra 1.21
-o jxmterm jar placed in the same directory of the script.  See http://wiki.cyclopsgroup.org/jmxterm/
-o nodetool in $PATH.  This is utilized for locating the cassandra.yaml file
+* Tested only on CentOS and Apache Cassandra 1.21
+* jxmterm jar placed in the same directory of the script.  See http://wiki.cyclopsgroup.org/jmxterm/
+* nodetool in $PATH.  This is utilized for locating the cassandra.yaml file
 
 ### Usage
 ```
@@ -42,7 +42,7 @@ In the below example, we have a keyspace that uses a TTL of 30 days.  As of Octo
 -rw-r--r-- 1 cassandra cassandra 12142340 Aug 26 09:02 /var/data/cassandra/data/SampleKS/Standard1/SampleKS-Standard1-ic-32-Data.db
 -rw-r--r-- 1 cassandra cassandra     1196 Sep  3 09:47 /var/data/cassandra/data/SampleKS/Standard1/SampleKS-Standard1-ic-33-Data.db
 
-[cassandra@cassandra1 ~]$ compactcf.sh SampleKS Standard1 192.168.210.234 11000
+[cassandra@cassandra1 ~]$ compactcf.sh SampleKS Standard1 10.10.10.12 7199
 
 Processing directory /var/data/cassandra/data/
 Compacting SampleKS-Standard1-ic-22-Data.db
